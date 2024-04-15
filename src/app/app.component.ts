@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ShoppingAppBasics';
+  pageToDisplay : string = 'Recipe';
+
+  switchPage(event : {page: string}){
+    console.log(event.page);
+    this.pageToDisplay = event.page;
+  }
 }
