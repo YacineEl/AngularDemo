@@ -1,9 +1,9 @@
 <app-header (pageToDisplay) = "switchPage($event)"></app-header>
 <div class="container">
-  <div class="row" *ngIf="[pageToDisplay] == 'Recipe'">
+  <div class="row" *ngIf="pageToDisplay == 'Recipe'">
     <app-recipes></app-recipes>
   </div>
-  <div class="row" *ngIf="[pageToDisplay] == 'Shopping'">
+  <div class="row" *ngIf="pageToDisplay == 'Shopping'">
     <app-shopping-list></app-shopping-list>
   </div>
 </div>
