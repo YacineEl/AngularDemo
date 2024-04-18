@@ -9,8 +9,8 @@ import { Ingredient } from '../../shared/ingredient.model';
 export class ShoppingListEditComponent {
 
   ingredient: Ingredient;
-  @ViewChild('nameInput') nameInput: ElementRef;
-  @ViewChild('quantityInput') quantityInput: ElementRef;
+  @ViewChild('nameInput', {static : true}) nameInput: ElementRef;
+  @ViewChild('quantityInput', {static : true}) quantityInput: ElementRef;
 
   @Output() addIngredient: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
   @Output() removeIngredient: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
