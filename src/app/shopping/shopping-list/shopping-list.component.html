@@ -1,7 +1,8 @@
 <div class="row">
     <div class="col-md-10">
         <app-shopping-list-edit 
-        (addIngredient)="addNewIngredientToList($event)">
+        (addIngredient)="addIngredient($event)"
+        (removeIngredient)="removeIngredient($event)">
     </app-shopping-list-edit>
         <hr>
         <ul class="list-group">

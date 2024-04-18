@@ -19,8 +19,17 @@ export class ShoppingListComponent {
     ];
   }
 
-  addNewIngredientToList(ing){
+  addIngredient(ing){
     console.log(ing);
     this.ingredients.push(ing);
   }
+  removeIngredient(ing: Ingredient) {
+    console.log(ing);
+    for(let i = this.ingredients.length - 1; i >= 0; i--) {
+      if(this.ingredients[i].name === ing.name) {
+        this.ingredients.splice(i, 1);
+      }
+    }
+  }
+  
 }

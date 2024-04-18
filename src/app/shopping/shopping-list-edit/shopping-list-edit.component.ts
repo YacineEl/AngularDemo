@@ -13,6 +13,7 @@ export class ShoppingListEditComponent {
   @ViewChild('quantityInput') quantityInput: ElementRef;
 
   @Output() addIngredient: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
+  @Output() removeIngredient: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
 
   addNewIngredient(){
     this.ingredient = new Ingredient(
@@ -20,5 +21,10 @@ export class ShoppingListEditComponent {
       this.quantityInput.nativeElement.value);
     this.addIngredient.emit(this.ingredient);
   }
-
+  removeOldIngredient(){
+    this.ingredient = new Ingredient(
+      this.nameInput.nativeElement.value,
+      this.quantityInput.nativeElement.value);
+    this.removeIngredient.emit(this.ingredient);
+  }
 }
