@@ -18,4 +18,9 @@ export class ShoppingListComponent {
       new Ingredient('Sugar', 1)
     ];
   }
+
+  addNewIngredientToList(ing){
+    console.log(ing);
+    this.ingredients.push(ing);
+  }
 }
